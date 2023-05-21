@@ -1,0 +1,30 @@
+<nav class="nav">
+    <div class="nav-menu flex-row">
+        <div class="nav-brand">
+            <a href="{%url 'home'%}" class="text-gray">
+                <img src="{{info.logo.url}}" alt="">
+            </a>
+        </div>
+        <div class="toggle-collapse">
+            <div class="toggle-icons">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="{%url 'home'%}">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Product</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Contact US</a>
+                </li>
+                <li class="nav-link">
+                    <a href="{%url 'admin'%}">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

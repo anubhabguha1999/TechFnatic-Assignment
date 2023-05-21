@@ -1,0 +1,22 @@
+<div class="card-row">
+    {%for product in products%}
+    <div class="card">
+        {%if request.user.is_staff%}
+        <a href="{%url 'delete' product.id%}">
+            <i class="fa-solid fa-trash"></i>
+        </a>
+        {%endif%}
+        <img src="{{product.image.url}}" alt="">
+        <hr class="card-hr">
+        <div class="card-detail">
+            <h3>{{product.title}}</h3>
+            <h4>{{product.info}}</h4>
+            <a href="#">Read More -></a>
+        </div>
+        <button onclick="window.location.href='{%url 'product-update' product.id%}'"
+            class="product-update-link">Update</button>
+    </div>
+
+    {%endfor%}
+
+</div>

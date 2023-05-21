@@ -1,0 +1,8 @@
+<form action="{%url 'product-add'%}" method="post" enctype="multipart/form-data">
+    <h1>Add Products</h1>
+    {%csrf_token%}
+    {{product_form}}
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>

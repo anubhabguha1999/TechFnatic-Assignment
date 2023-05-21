@@ -1,0 +1,20 @@
+<div id="website-image-update">
+    <div class="update-img">
+        {%for image in web_images%}
+        <div class="web-image-row">
+
+            <img src="{{image.image.url}}" alt="">
+            <p>{{image.title}} Image</p>
+
+            <form action="{%url 'website-image-add' image.id%}" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                {{website_image_form}}
+                <div>
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+        {%endfor%}
+    </div>
+
+</div>

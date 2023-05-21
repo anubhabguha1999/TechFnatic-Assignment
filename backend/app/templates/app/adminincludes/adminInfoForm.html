@@ -1,0 +1,8 @@
+<form action="{%url 'admin-info-update' info.id%}" method="post" enctype="multipart/form-data">
+    <h1>Update Admin Info</h1>
+    {% csrf_token %}
+    {{admin_update_form}}
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>
